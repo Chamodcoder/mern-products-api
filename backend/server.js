@@ -14,10 +14,10 @@ app.use("/api/products",productRoutes);
 
 console.log(process.env.MONGO_URI);
 
-connectDB();
+// connectDB();
 
 app.listen(5000,() =>{
-    // connectDB();
+    connectDB();
     console.log('server started at http://localhost:5000');
 });
 
