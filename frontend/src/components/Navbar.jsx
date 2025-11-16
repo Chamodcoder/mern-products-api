@@ -45,7 +45,6 @@ const Navbar = () => {
 
 
             </Flex>
-     <div>Navbar</div>   
     </Container>
   )
 }
