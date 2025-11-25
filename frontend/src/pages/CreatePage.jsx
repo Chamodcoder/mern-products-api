@@ -1,8 +1,9 @@
 import { Container, useColorModeValue } from '@chakra-ui/react'
 import React from 'react'
 import { Route, Routes } from "react-router-dom"
-import { Box, Heading, VStack, Input } from '@chakra-ui/react'
+import { Box, Heading, VStack, Input, Button} from '@chakra-ui/react'
 import {useState} from "react";
+
 
 
 const CreatePage = () => {
@@ -11,6 +12,10 @@ const CreatePage = () => {
     price:"",
     image:"", 
   });
+
+  const handledAddProduct= () =>{
+    console.log(newProduct);
+  }
 
     return (
     <Container maxW={"container.sm"}>
@@ -32,17 +37,20 @@ const CreatePage = () => {
             onChange={(e)=>setNewProduct({...newProduct, name:e.target.value})}
           />
           <Input
-            placeholder='Product Name'
+            placeholder='Product price'
             name='price'
             value={newProduct.price}
             onChange={(e)=>setNewProduct({...newProduct, price:e.target.value})}
           />
           <Input
-            placeholder='Product Name'
+            placeholder='Image URL'
             name='image'
             value={newProduct.image}
             onChange={(e)=>setNewProduct({...newProduct, image:e.target.value})}
           />
+          <Button colorScheme="blue" onClick={handledAddProduct} w="full">
+            Add Product
+          </Button>
         </VStack>
       </Box>
       </VStack>
