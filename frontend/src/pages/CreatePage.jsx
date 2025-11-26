@@ -33,6 +33,7 @@ const CreatePage = () => {
         isClosable: true,
       });
     }
+    setNewProduct ({ name:"", price:"", image:"" });
   }
 
     return (
